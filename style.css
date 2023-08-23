@@ -87,7 +87,7 @@ p {
     font-size: 22px;
 }
 
-.movie-text>p {
+.movie-text>p{
     margin: 22px 0px;
 }
 
@@ -99,16 +99,67 @@ hr {
 footer {
     height: 90px;
     text-align: center;
+
+}
+#footer{
+    align-items: center;
 }
 
+
 /* Iteration 1: Styling all the flex elements with (Justify-content:space-between) & (align-items:center) */
-
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#navbar{
+    justify-content: space-between;
+}
 /* Iteration 2: Using flex-wrap */
-
+.movies{
+    min-height: 300px;
+    flex-wrap: wrap;
+    margin: 3% 0;
+}
 /* Iteration 3: Styling all the flex elements with (flex-direction:column), (Justify-content:space-evenly) */
-
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
 /* Iteration 4: Animation */
+#scroll{
+
+    animation: arrow_move 2s infinite;
+    animation-play-state: running;
+    position: relative;
+
+}
+@keyframes arrow_move{
+    0%{
+        top: 0;
+    }
+    
+    100%{
+        top: 50px;
+    }
+      
+}
 
 /* Iteration 5: Making webpage mobile responsive */
+@media screen  and (max-width: 600px){
+    .flex-column{
+        align-items: center;
+        text-align: center;
+        padding: 5%;
+        box-sizing: border-box;
+    }
+    .wrap-reverse{
+        flex-wrap: wrap-reverse;
+    }
+}
+
+
 
 
